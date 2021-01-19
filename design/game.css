@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+body {
+  
+  background: #101010;
+  font-family: 'Yusei Magic', sans-serif;
+  user-select: none;
+  
+}
+
+.lobby {
+  
+  width: 250px;
+  height: 300px;
+  border: 2px solid #006DFF;
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;   
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.lobby.hide {
+  
+  visibility: 0;
+  opacity: 0;
+  position: absolute;
+  top: -3000px;
+  transition: 1s;
+  
+}
+
+h3.title {
+  
+  color: #CFCFCF;
+  text-align: center;
+  position: absolute;
+  top: -70px;
+  
+}
+
+h3.small-title {
+  
+  color: #006DFF;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  animation: small-tittle 1.2s linear infinite;
+  animation-direction: alternate;
+  
+}
+
+@keyframes small-tittle {
+  
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+  
+}
+
+input[type=nick-name] {
+  
+  width: 150px;
+  height: 25px;
+  position: absolute;
+  top: 90px;
+  background: transparent;
+  border: 1.5px solid #006DFF;
+  border-radius: 3px;
+  padding: 5px;
+  padding-left: 15px;
+  font-family: 'Yusei Magic', sans-serif;
+  
+}
+
+::placeholder {
+  
+  color: #CFCFCF;
+  
+}
+
+input[type=nick-name]:focus {
+  
+  outline: none;
+  color: #CFCFCF;
+  font-family: 'Yusei Magic', sans-serif;
+  
+}
+
+input[type=number] {
+  
+  width: 150px;
+  height: 25px;
+  position: absolute;
+  top: 140px;
+  background: transparent;
+  border: 1.5px solid #006DFF;
+  border-radius: 3px;
+  padding: 5px;
+  padding-left: 15px;
+  font-family: 'Yusei Magic', sans-serif;
+  
+}
+
+input[type=number]:focus {
+  
+  outline: none;
+  color: #CFCFCF;
+  font-family: 'Yusei Magic', sans-serif;
+  
+}
+
+.play-button {
+  
+  width: 90px;
+  height: 40px;
+  border: 2px solid #006DFF;
+  border-radius: 7px;
+  position: relative;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.play-text {
+  
+  color: #CFCFCF;
+  position: absolute;
+  top: -18px;
+  
+}
+
+h6.version {
+  
+  opacity: 0.1;
+  color: #CFCFCF;
+  position: absolute;
+  bottom: -20px;
+  left: 8px;
+ 
+}
+
+.game {
+  
+  width: 250px;
+  height: 300px;
+  border: 2px solid #006DFF;
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;   
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+  
+}
+
+.game.hide {
+  
+  visibility: 0;
+  opacity: 0;
+  position: absolute;
+  top: -3000px;
+  
+}
+
+.separator {
+  
+  width: 2px;
+  height: 255px;
+  background: #006DFF;
+  transform: rotate(-80deg);
+  position: absolute;
+  top: 25px;
+  
+}
+
+.h-score {
+  
+  width: 30px;
+  height: 30px;
+  background: #101010;
+  border: 2px solid #006DFF;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  left: -18px;
+  display: flex;
+  justify-content: center;
+  
+} 
+
+.p-score {
+  
+  width: 30px;
+  height: 30px;
+  background: #101010;
+  border: 2px solid #006DFF;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 10px;
+  right: -18px;
+  display: flex;
+  justify-content: center;
+  
+} 
+
+.score {
+  
+  color: white;
+  position: absolute;
+  top: 2px;
+  
+}
+
+.h-nick-name {
+  
+  color: #CFCFCF;
+  background: #101010;
+  padding: 5px;
+  position: absolute;
+  top: -40px;
+  text-transform: uppercase;
+  
+}
+
+.h-nick-name.hide {
+  
+  opacity: 0;
+  visibility: 0;
+  
+}
+
+.p-nick-name { 
+  
+  color: #CFCFCF;
+  background: #101010;
+  padding: 5px;
+  position: absolute;
+  bottom: -40px;
+  text-transform: uppercase;
+ 
+} 
+
+.p-nick-name.hide {
+  
+  opacity: 0;
+  visibility: 0;
+  
+}
+
+.reload {
+  
+  color:  #006DFF;
+  font-size: 15px;
+  border: 1.2px solid #CFCFCF;
+  border-radius: 15px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  
+}
+
+.reload.hide {
+  
+  opacity: 0;
+  visibility: 0;
+  top: -1000px;
+  
+}
+
+.reload.loading {
+  
+  animation: loading 1s linear;
+  
+}
+
+@keyframes loading {
+  
+  0% {
+   transform: rotate(0deg);
+  }
+  
+  100% {
+   transform: rotate(360deg);
+  }
+  
+}
+
+.h-frame {
+  
+  width: 70px;
+  height: 70px;
+  border: 2px solid #006DFF;
+  border-radius: 70px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  overflow: hidden;
+  
+}
+
+.p-frame {
+  
+  width: 70px;
+  height: 70px;
+  border: 2px solid #006DFF;
+  border-radius: 70px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+  
+}
+
+.h-1-position {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+
+.h-2-position {
+  
+  position: absolute;
+  top: -3.5px;
+  left: -3.8px;
+  
+}
+
+.h-3-position {
+  
+  position: absolute;
+  top: -3.5px;
+  left: -3.8px;
+  
+} 
+
+.p-1-position {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+
+.p-2-position {
+  
+  position: absolute;
+  top: -3.5px;
+  left: -3.8px;
+  
+}
+
+.p-3-position {
+  
+  position: absolute;
+  top: -3.5px;
+  left: -3.8px;
+  
+} 
+
+.stone {
+  
+  width: 70px;
+  height: 70px;
+  background: url(/img/stone.png);
+  background-size: cover;
+  
+}
+
+.paper {
+  
+  width: 78.5px;
+  height: 78.5px;
+  background: url(/img/paper.png);
+  background-size: cover;
+  
+}
+
+.scissors {
+  
+  width: 78.5px;
+  height: 78.5px;
+  background: url(/img/scissors.png);
+  background-size: cover;
+  
+}
+
+.stone-btn {
+  
+  width: 70px;
+  height: 30px;
+  border: 2px solid #006DFF;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  
+}
+
+.paper-btn {
+  
+  width: 70px;
+  height: 30px;
+  border: 2px solid #006DFF;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -70px;
+  
+}
+
+.scissors-btn {
+  
+  width: 70px;
+  height: 30px;
+  border: 2px solid #006DFF;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -70px;
+  right: 0; 
+  
+}
+
+.stone-btn.hide, 
+.paper-btn.hide,
+.scissors-btn.hide {
+  
+  opacity: 0;
+  visibility: 0;
+  position: absolute;
+  top: -1000px;
+  
+}
+
+.s-b-name {
+  
+  color: #CFCFCF;
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  
+}
+
+.p-b-name {
+  
+  color: #CFCFCF;
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  
+}
+
+.sc-b-name {
+  
+  color: #CFCFCF;
+  font-size: 14px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  
+}
+
+.you-win {
+  
+  color: #CFCFCF;
+  padding: 5px;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  transition: 1s;
+  
+}
+
+.you-win.hide {
+  
+  opacity: 0;
+  visibility: 0;
+  right: -55px;
+  
+}
+
+.win {
+  
+  color: #CFCFCF;
+  padding: 5px;
+  position: absolute;
+  bottom: 80px;
+  left: 35px;
+  transition: 1s;
+  
+}
+
+.win.hide {
+  
+  opacity: 0;
+  visibility: 0;
+  left: -55px;
+  
+}
+
+.you-win.hide-2,
+.win.hide-2 {
+  
+  opacity: 0;
+  visibility: 0;
+  
+}
+
+.door-1 {
+  
+  background: #101010;
+  width: 45px;
+  height: 25px;
+  position: absolute;
+  top: 107px;
+  right: -13px;
+  
+}
+
+.door-2 {
+  
+  background: #101010;
+  width: 45px;
+  height: 25px;
+  position: absolute;
+  bottom: 106px;
+  left: -13px;
+  
+}
+
+.door-1.hide,
+.door-2.hide {
+  opacity: 0;
+  visibility: 0;
+  transition: 1s;
+}
+
+.door-1.hide-2,
+.door-2.hide-2 {
+  
+  opacity: 0;
+  visibility: 0;
+  
+}
+
+.match-win {
+  
+  color: greenyellow;
+  position: absolute;
+  top: -120px;
+  left: 40px;
+  transition: 1s;
+  
+}
+
+.match-lost {
+  
+  color: red;
+  position: absolute;
+  top: -120px;
+  left: 40px;
+  transition: 1s;
+  
+}
+
+.match-win.hide, 
+.match-lost.hide {
+ 
+  opacity: 0;
+  visibility: 0;
+  top: -500px;
+  
+}
+
+.match-win.hide-2, 
+.match-lost.hide-2 {
+  
+  opacity: 0;
+  visibility: 0;
+  position: absolute;
+  top: -500px;
+  
+}
+
+.win-color {
+  
+  border: 2px solid greenyellow;
+  box-shadow: 0 0 10px 1px greenyellow;
+  
+}
+
+.win-color-2 {
+  
+  background: greenyellow;
+  
+}
+
+.win-color-3 {
+  
+  color: greenyellow;
+  
+}
+
+.lost-color {
+  
+  border: 2px solid red;
+  box-shadow: 0 0 10px 1px red;
+  
+}
+
+.lost-color-2 {
+  
+  background: red;
+  
+}
+
+.lost-color-3 {
+  
+  color: red;
+  
+}

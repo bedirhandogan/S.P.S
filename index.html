@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+ 
+  
+  <title>Stone, Paper and Scissors</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="design/game.css">
+</head>
+  <body>
+  
+   <div class="lobby">
+     <h3 class="title">Stone, Paper and Scissors</h3>
+     <h3 class="small-title">Human Vs Player</h3>
+     <input type="nick-name" placeholder="Nick Name"> </input>
+     
+     <input type="number" placeholder="Match Count"> </input>  
+     
+     <div class="play-button">
+       <h2 class="play-text" id="play">PLAY</h2> 
+     </div>
+      
+     <h6 class="version"> Version: </h6>
+   </div>  
+   
+     <div class="game hide">
+      <i class="fas fa-redo reload" id="reload"></i>
+ 
+     <div class="h-frame"> 
+      <div class="stone h-1-position"> </div>
+     </div> 
+     
+     <div class="p-frame">
+      <div class="stone p-1-position"> </div>
+     </div>
+     
+       <div class="separator"> </div>
+        <div class="h-score"> 
+        <span class="score" id="human">0</span>
+         </div>
+        <div class="p-score"> 
+        <span class="score" id="player">0</span>
+        </div>
+        
+        <div class="door-2 hide"> </div>
+        <div class="door-1 hide"> </div>
+        <h4 class="you-win hide"> You Win </h4>
+        <h4 class="win hide"> Win </h4> 
+        
+       <h4 class="h-nick-name"> HUMAN </h4>
+       <h4 class="p-nick-name"> PLAYER </h4>
+       
+       <div class="stone-btn"> <span class="s-b-name"> STONE </span> </div>
+       <div class="paper-btn"> <span class="p-b-name"> PAPER </span> </div>
+       <div class="scissors-btn"> <span class="sc-b-name"> SCİSSORS </span> </div>
+       <h3 class="match-win hide"> You won the match </h3>
+       <h3 class="match-lost hide"> You lost the match </h3>
+      </div>
+
+<script src="game/document.js" type="text/javascript"></script>
+<script src="game/information.js" type="text/javascript"></script>
+<script src="game/play.js" type="text/javascript"></script>
+<script src="game/reload.js" type="text/javascript"></script>
+<script src="game/score.js" type="text/javascript"></script>
+<script src="game/start.js" type="text/javascript"></script>
+</body>
+</html>
