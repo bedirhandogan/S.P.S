@@ -4,13 +4,11 @@ Stone, Paper and Scissors Game
 ### Information:
 >「1」DEVELOPER: Bedirhan Doğan
 
->「2」GAME: Stone, Paper and Scissors
+>「2」VERSION: 1.0.0
 
->「3」VERSION: 1.0.0
+>「3」BUILD DATE: 16/01/2021
 
->「4」BUILD DATE: 16/01/2021
-
->「5」LANGUAGE: (EN)
+>「4」LANGUAGE: (EN)
 
 ## Lobby Screenshot:
 > ![lobby](https://i.hizliresim.com/4SAfMc.jpg)
